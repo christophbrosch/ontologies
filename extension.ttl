@@ -1,4 +1,4 @@
-@prefix ke3p: <http://ke3p.umwelt-campus.de/2024/04/ns#> .
+@prefix ke3p: <https://purl.archive.org/ke3p> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -16,7 +16,7 @@ ke3p:maxLevel rdf:type rdf:Property ;
         rdfs:domain skos:ConceptScheme ;
         rdfs:comment "The highest level of any concept associated with the concept scheme via the inScheme property." ;
         rdf:label "maxLevel" ;
-        rdf:range xsd:integer.
+        rdf:range xsd:integer .
 
 ke3p:isBalanced rdf:type rdf:Property ;  
         rdfs:subPropertyOf skos:note ;
