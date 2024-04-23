@@ -1,6 +1,0 @@
-ke3p:isBalanced rdf:type rdf:Property ;  
-        rdfs:subPropertyOf skos:note ;
-        rdfs:domain skos:ConceptScheme ;
-        rdfs:comment "Indicates whether the taxonomy is balanced." ; 
-        rdf:label "isBalanced" ;
-        rdfs:range xsd:boolean .

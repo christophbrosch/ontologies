@@ -338,9 +338,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             
           
-              <li class="second-level" style="line-height: 20px;" id="sd_3"><a class="active"  href="prop-ke3pisbalanced.html">ke3p:isBalanced</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_3"><a   href="prop-ke3pisbalanced.html">ke3p:isBalanced</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_4"><a   href="prop-ke3plevel.html">ke3p:level</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_4"><a class="active"  href="prop-ke3plevel.html">ke3p:level</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_5"><a   href="prop-ke3pmaxlevel.html">ke3p:maxLevel</a></li>
           
@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            ke3p:isBalanced
+            ke3p:level
         </li>
   </ol>
 
@@ -471,7 +471,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                ke3p:isBalanced
+                ke3p:level
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -490,7 +490,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'isBalanced' - Indicates whether the taxonomy is balanced.">ke3p:isBalanced</a>
+                            <li><a style="font-weight: bold;" title="'level' - The level of a concept in the hierarchy of concepts.">ke3p:level</a>
 
                             
                               </li>
@@ -514,7 +514,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>https://purl.archive.org/ke3p#isBalanced</code>
+                 <code>https://purl.archive.org/ke3p#level</code>
              </div>
            </div>
             </div></div>
@@ -529,7 +529,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 isBalanced
+                 level
              </div>
            </div>
             </div></div>
@@ -544,7 +544,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
 
-                <p>Indicates whether the taxonomy is balanced.</p>
+                <p>The level of a concept in the hierarchy of concepts.</p>
             </div>
           </div>
            </div></div>
@@ -575,7 +575,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                      
                          
                          
-                              <a href="class-skosconceptscheme.html" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">skos:ConceptScheme</a>
+                              <a href="class-skosconcept.html" title="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>
                            
                            
                          
@@ -583,14 +583,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      ke3p:isBalanced
+                      ke3p:level
                     </td>
 
                     <td>
                       
                           
                           
-                               <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a>
+                               <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a>
                              
                             
                           
@@ -618,11 +618,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">ke3p</span><span class="p">:</span><span class="nt">isBalanced</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
-    <span class="nn">rdf</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;isBalanced&quot;</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Indicates whether the taxonomy is balanced.&quot;</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">ConceptScheme</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">boolean</span> <span class="p">;</span>
+<span class="nn">ke3p</span><span class="p">:</span><span class="nt">level</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
+    <span class="nn">rdf</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;level&quot;</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;The level of a concept in the hierarchy of concepts.&quot;</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">Concept</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">integer</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subPropertyOf</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">note</span> <span class="p">.</span>
 </pre></div>
 
@@ -662,7 +662,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Tue, 23 Apr 2024 10:55:34 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v2.1.1)</p>
+      <p class="text-muted">Documentation automatically generated on Tue, 23 Apr 2024 11:29:25 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v2.1.1)</p>
 
     
     </div>
@@ -723,7 +723,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_3").offset().top - 100
+          scrollTop: $("#sd_4").offset().top - 100
       }, 100);
     });
 
