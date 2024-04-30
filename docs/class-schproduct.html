@@ -1,6 +1,12 @@
 
 
 
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -177,10 +183,7 @@
   <body>
 
 
-
-    
-
-    
+  
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -211,7 +214,7 @@
         
         
         
-        <li class="active" ><a href="statistics.html">Statistics</a></li>
+        <li  ><a href="statistics.html">Statistics</a></li>
 
 
 
@@ -224,9 +227,6 @@
   </div>
 </nav>
 
-    
-
-
 
 
 
@@ -238,9 +238,8 @@
 
 
     
-
+  
     
-        
 <!-- Sidebar -->
 <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
@@ -256,7 +255,7 @@
 
             
           
-              <li class="second-level" style="line-height: 20px;" id="sd_2"><a  href="class-schproduct.html">sch:Product</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_2"><a class="active" href="class-schproduct.html">sch:Product</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_3"><a  href="class-skosconcept.html">skos:Concept</a></li>
           
@@ -304,8 +303,7 @@
 
 
 <!-- /#sidebar-wrapper -->
-    
-
+  
 
 
 
@@ -316,8 +314,9 @@
 
 	
 
+      
 
-
+    
     
         
 
@@ -326,50 +325,59 @@
 
 
 
-<ol class="breadcrumb">
-  <li>
-    <a href="index.html">Home</a>
-  </li>
-  <li class="active">
-        Statistics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
     </li>
-</ol>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <li>
+          <a href="entities-az.html">Entities</a>
+    </li>
+    <li>
+          <a href="entities-tree-classes.html">Classes</a>
+    </li>
+      <li class="active">
+            sch:Product
+        </li>
+  </ol>
 
 
 
@@ -392,140 +400,205 @@
 
     
 
+    
+    <h1>
+      sch:Product
+      
+        <small class="label label-info label-xs">leaf node</small>
+      
+    </h1>
 
+    <hr>  
 
-
-        <div class="page-header">
-
-            <h3>Statistics
-
-            </h3>
-
-        </div>
-
-
-
-
-      <div class="row">
-
-        
-        <div class="col-md-6">
-
-
-            <div class="row"><div class="col-md-12">
-                <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Entity Types</h3>
-              </div>
-              <div class="panel-body">
-
-
-                  <div class="row">
-
-
-                      <div class="col-md-12 ">
-                          <br />
-                          <canvas id="entitiesBarChart" ></canvas>
-                      </div>
-
-
-
-                  </div>
-
-
-              </div>
-            </div>
-             </div></div>
-
-
-
-
-
-              <div class="row"><div class="col-md-12">
-                 <div class="panel panel-default">
-               <div class="panel-heading">
-                 <h3 class="panel-title">Triples</h3>
-               </div>
-               <div class="panel-body">
-
-                   <div class="col-sm-3 col-md-3 ">
-                       <p id="chartsLegend">
-                           <span class="text-muted" style="text-transform: uppercase;">Triples</span>
-                           <br /><span style="font-size: 250%;"> 40</span>
-                       </p>
-                   </div>
-
-   	        	<canvas id="triplesStats" ></canvas>
-
-               </div>
-             </div>
-              </div></div>
-
-
-
-
-        </div>
-         
-
-
-        
-        <div class="col-md-6">
-
-
-
-
-        
-            <div class="row"><div class="col-md-12">
-              <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Top Classes</h3>
-            </div>
-            <div class="panel-body">
-
-                <div class="row">
-
-
-                    <div class="col-md-12 ">
-
-                        <span class="text-muted">NOTE: size = number of sub-classes</span>
-                        <br />
-                        <canvas id="toplayerChart" ></canvas>
-
-
-                    </div>
-
-
-
-                </div>
-
-            </div>
-          </div>
-          </div></div>
-        
-
-
-
-
-        
-
-
-
-
-        </div>
-         
-
+    
+    <div class="tree-container">
+      <div class="tree">
+        <ul>
+          
+            <li><a href="entities-tree-classes.html">owl:Thing</a>
+              <ul>
+                <li><a style="font-weight: bold;" title="'Product'">sch:Product</a>
+                  
+                </li>
+              </ul>
+            </li>
+          
+        </ul>
       </div>
+    </div>
 
 
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">URI</h3>
+          </div>
+          <div class="panel-body">
+            <code>http://schema.org/Product</code>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-    <div class="container margin50">
+    
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Label</h3>
+          </div>
+          <div class="panel-body">
+            Product
+          </div>
+          </div>
+        </div>
+      </div>
+    
 
 
-    </div> <!-- /container -->
+    
+    
 
 
-  
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Usage</h3>
+            </div>
+            <div class="panel-body" style="overflow: auto;">
+              <p>Instances of sch:Product can have the following properties:</p>
+            </div>
+            <table class="table table-bordered" style="overflow: auto;">
+              <tr class="table-classproperties">
+                <th>PROPERTY</th><th>TYPE</th><th>DESCRIPTION</th><th>RANGE</th>
+              </tr>
+              
+                
+                  
+                      <tr class="table-inheritanceinfo">
+                        <th colspan="4" class="treeinfo">
+                          <span class="label label-default">From class <a title="sch:Product" href="class-schproduct.html" class="fromclass_link">sch:Product</a></span>
+                        </th>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="ke3p:shelf" href="prop-ke3pshelf.html">ke3p:shelf</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The shelf on which a product is located.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:int</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="ke3p:shelfField" href="prop-ke3pshelffield.html">ke3p:shelfField</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The field of a shelf on which the product is located.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:int</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="ke3p:shelfFloor" href="prop-ke3pshelffloor.html">ke3p:shelfFloor</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The floor of a shelf on which the product is located.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:int</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  
+                
+              
+            </table>
+          </div>
+        </div>
+      </div>
+    
+
+
+    
+    
+
+
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Implementation</h3>
+          </div>
+          <div class="panel-body implementation-panel">
+            
+              <div class="implementation">
+                <code style="background-color: white;"></code>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        
+
+
 
 
 	</div><!-- /#page-content-wrapper -->
@@ -595,285 +668,26 @@ $('#search-input-sidebar').keyup(function() {
 
 
 
+  <!-- Scroll Sidebar Script -->
 
+  
+  
 
+  <script type="text/javascript">
 
-
-
-
-
-<script type="text/javascript">
-
-    // utility to assign colors dynamically at js level
-
-    function getColor(i) {
-        var colors = [["#F7464A", "#FF5A5E"],    // color , highlightColor
-                       ["#46BFBD", "#5AD3D1"],
-                       ["#FDB45C", "#FFC870"],
-                       ["#6588A8", "#CCD3FF"],
-                       ["#6960EC", "#736AFF"],
-                       ["#FFA62F", "#FBB917"],
-                       ["#7D0552", "#7E354D"],
-                       ["#FDB45C", "#FFC870"],
-                        ];
-        return colors[i]
-    }
-
-
-
-// FIRST CHART : types of entities
-
-
-	var ctx = document.getElementById("entitiesBarChart").getContext("2d");
-
-    var data = {
-    // labels: ["January", "February", "March", "April", "May", "June", "July"],
-    labels: [
-             
-                
-            
-                
-            
-                "Classes"
-                     , 
-                
-            
-                "Properties"
-                     , 
-                
-            
-                "Annotation Properties"
-                     , 
-                
-            
-                "Object Properties"
-                     , 
-                
-            
-                "Datatype Properties"
-                     , 
-                
-            
-                "Skos Concepts"
-                     , 
-                
-            
-                "Data Shapes"
-                     , 
-                
-            
-                
-            
-    ],
-    datasets: [
-        {
-            label: "Entities Count",
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(108, 240, 92, 0.2)',
-                'rgba(186, 186, 186, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(33, 178, 15, 1)',
-                'rgba(74, 69, 69, 1)'
-            ],
-            borderWidth: 1,
-          // data: [65, 59, 80, 81, 56, 55, 40],
-            data: [
-             
-                
-            
-                
-            
-                3
-                     , 
-                
-            
-                6
-                     , 
-                
-            
-                0
-                     , 
-                
-            
-                0
-                     , 
-                
-            
-                0
-                     , 
-                
-            
-                0
-                     , 
-                
-            
-                0
-                     , 
-                
-            
-                
-            
-                 ],
-            }
-        ]
-        };
-
-    var myBarChart = new Chart(ctx, {
-    type: 'bar',
-    data: data,
-    options: {
-        legend: {
-            display: false,
-        }
-        }
+    $(document).ready(function (){
+      $('#sidebar-wrapper').animate({
+          scrollTop: $("#sd_2").offset().top - 100
+      }, 100);
     });
 
-
-
-
-// SECOND CHART : top layer Classes
-
-	
-
-    var ctx2 = document.getElementById("toplayerChart").getContext("2d");
-
-    var data2 = {
-            datasets: [{
-                data: [
-                    0, 
-                    0, 
-                    0
-                    
-                ],
-                backgroundColor: [
-                  // navy
-                  "#000080",
-                  // blue
-                  "#0000FF",
-                  // teal
-                  "#008080",
-                  // aqua
-                  "#00FFFF",
-                    // maroon
-                    "#800000",
-                    // red
-                    "#FF0000",
-                    // purple
-                    "#800080",
-                    // fuchsia
-                    "#FF00FF",
-                    // green
-                    "#008000",
-                    // lime
-                    "#00FF00",
-                    // olive
-                    "#808000",
-                    // yellow
-                    "#FFFF00",
-                    // black
-                    "#000000",
-                    // silver
-                    "#C0C0C0",
-                    // gray
-                    "#808080",
-                    // white
-                    "#FFFFFF"
-                  ],
-                label: 'Top Layer' // for legend
-            }],
-            labels: [
-                "sch:Product", 
-                "skos:Concept", 
-                "skos:ConceptScheme"
-                
-            ]
-        };
-    var myPolarChart = new Chart(ctx2, {
-    type: 'polarArea',
-    data: data2,
-    options: {
-        legend: {
-            display: true,
-        }
-        }
-    });
-
-    
-
-
-
-
-// SECOND CHART : top layer SKOS
+  </script>
 
 
 
 
 
 
-
-
-// THIRD CHART: triples
-
-	var ctxTriples = document.getElementById("triplesStats").getContext("2d");
-	var dataTriples = {
-    labels: ["Triples"],
-    datasets: [
-                {
-                    label: "Triples Count",
-                    backgroundColor: [
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255,99,132,1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1,
-                    data: [40],
-                }
-            ]
-        };
-
-    var myBarChart = new Chart(ctxTriples, {
-    type: 'bar',
-    data: dataTriples,
-    options: {
-        legend: {
-            display: false,
-            },
-        scales: {
-            yAxes: [{
-                stacked: true
-            }]
-        }
-        }
-    });
-
-
-
-
-</script>
 
 
 

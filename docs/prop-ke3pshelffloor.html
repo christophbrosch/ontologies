@@ -342,7 +342,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_5"><a   href="prop-ke3pisbalanced.html">ke3p:isBalanced</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_6"><a class="active"  href="prop-ke3plevel.html">ke3p:level</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_6"><a   href="prop-ke3plevel.html">ke3p:level</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_7"><a   href="prop-ke3pmaxlevel.html">ke3p:maxLevel</a></li>
           
@@ -350,7 +350,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_9"><a   href="prop-ke3pshelffield.html">ke3p:shelfField</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_10"><a   href="prop-ke3pshelffloor.html">ke3p:shelfFloor</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_10"><a class="active"  href="prop-ke3pshelffloor.html">ke3p:shelfFloor</a></li>
           
 
         
@@ -455,7 +455,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            ke3p:level
+            ke3p:shelfFloor
         </li>
   </ol>
 
@@ -479,7 +479,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                ke3p:level
+                ke3p:shelfFloor
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -498,7 +498,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'level' - The level of a concept in the hierarchy of concepts.">ke3p:level</a>
+                            <li><a style="font-weight: bold;" title="'shelfFloor' - The floor of a shelf on which the product is located.">ke3p:shelfFloor</a>
 
                             
                               </li>
@@ -522,7 +522,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>https://purl.archive.org/ke3p#level</code>
+                 <code>https://purl.archive.org/ke3p#shelfFloor</code>
              </div>
            </div>
             </div></div>
@@ -537,7 +537,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 level
+                 shelfFloor
              </div>
            </div>
             </div></div>
@@ -552,7 +552,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
 
-                <p>The level of a concept in the hierarchy of concepts.</p>
+                <p>The floor of a shelf on which the product is located.</p>
             </div>
           </div>
            </div></div>
@@ -583,7 +583,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                      
                          
                          
-                              <a href="class-skosconcept.html" title="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>
+                              <a href="class-schproduct.html" title="http://schema.org/Product">sch:Product</a>
                            
                            
                          
@@ -591,14 +591,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      ke3p:level
+                      ke3p:shelfFloor
                     </td>
 
                     <td>
                       
                           
                           
-                               <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a>
+                               <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">xsd:int</a>
                              
                             
                           
@@ -623,15 +623,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">ke3p:</span><span class="w"> </span><span class="nv">&lt;https://purl.archive.org/ke3p#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">sch:</span><span class="w"> </span><span class="nv">&lt;http://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">ke3p</span><span class="p">:</span><span class="nt">level</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
-    <span class="nn">rdf</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;level&quot;</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;The level of a concept in the hierarchy of concepts.&quot;</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">Concept</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">integer</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subPropertyOf</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">note</span> <span class="p">.</span>
+<span class="nn">ke3p</span><span class="p">:</span><span class="nt">shelfFloor</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
+    <span class="nn">rdf</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;shelfFloor&quot;</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;The floor of a shelf on which the product is located.&quot;</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">sch</span><span class="p">:</span><span class="nt">Product</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">int</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subPropertyOf</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">value</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -731,7 +731,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_6").offset().top - 100
+          scrollTop: $("#sd_10").offset().top - 100
       }, 100);
     });
 

@@ -4,10 +4,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sch: <http://schema.org/> .
 
 <https://purl.archive.org/ke3p#> a owl:Ontology ;
     rdfs:label "KE3P Ontology" ;
-    rdfs:comment "An ontology for addional properties intended to be used with SKOS taxonomies. Documentation: https://christophbrosch.github.io/ontologies/" ;
+    rdfs:comment "An ontology for addional properties intended to be used for our product knowledge graph. Documentation: https://christophbrosch.github.io/ontologies/" ;
     rdfs:isDefinedBy <https://purl.archive.org/ke3p#> .
 
 ke3p:level rdf:type rdf:Property ;  
@@ -30,3 +31,24 @@ ke3p:isBalanced rdf:type rdf:Property ;
         rdfs:comment "Indicates whether the taxonomy is balanced." ; 
         rdf:label "isBalanced" ;
         rdfs:range xsd:boolean .
+
+ke3p:shelf rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "The shelf on which a product is located." ;
+        rdf:label "shelf" ;
+        rdfs:range xsd:int .
+
+ke3p:shelfFloor rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "The floor of a shelf on which the product is located." ;
+        rdf:label "shelfFloor" ;
+        rdfs:range xsd:int .
+
+ke3p:shelfField rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "The field of a shelf on which the product is located." ;
+        rdf:label "shelfField" ;
+        rdfs:range xsd:int .
