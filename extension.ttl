@@ -4,7 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix sch: <http://schema.org/> .
+@prefix foodon: <http://purl.obolibrary.org/obo/FOODON_> .
 
 <https://purl.archive.org/ke3p#> a owl:Ontology ;
     rdfs:label "KE3P Ontology" ;
@@ -31,6 +31,184 @@ ke3p:isBalanced rdf:type rdf:Property ;
         rdfs:comment "Indicates whether the taxonomy is balanced." ; 
         rdf:label "isBalanced" ;
         rdfs:range xsd:boolean .
+
+ke3p:nutrition rdf:type rdf:Property ;  
+        rdfs:subPropertyOf sch:nutrition ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "The nutritional information of a product." ;
+        rdf:label "nutriton" ;
+        rdfs:range sch:nutritionalInformation .
+
+# WIP
+
+ke3p:Ingredient rdf:type owl:Class ;
+        owl:equivalentClass foodon:00002403 .
+
+ke3p:hasIngredient rdf:type rdf:Property ;  
+        owl:equivalentProperty foodon:00002420 ;
+        rdfs:domain sch:Product, ke3p:Ingredient ;
+        rdfs:range ke3p:Ingredient .
+
+ke3p:hasPrimaryIngredient rdf:type rdf:Property ;  
+        rdfs:subPropertyOf ke3p:hasIngredient .
+
+ke3p:index rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain ke3p:hasIngredient ;
+        rdfs:comment "The index of an ingredient in a product." ;
+        rdf:label "index" ;
+        rdfs:range xsd:int .
+
+ke3p:hasAmount rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain ke3p:hasIngredient ;
+        rdfs:comment "The amount of an ingredient in a product." ;
+        rdf:label "amount" ;
+        rdfs:range xsd:float .
+
+ke3p:definitionIncludes rdf:type rdf:Property ;  
+        rdfs:subPropertyOf skos:definition ;
+        rdfs:domain skos:Concept ;
+        rdfs:comment "A definition for which products to be associated with the concept." ;
+        rdf:label "definitionIncludes" ;
+        rdfs:range xsd:string .
+
+ke3p:definitionExcludes rdf:type rdf:Property ;  
+        rdfs:subPropertyOf skos:definition ;
+        rdfs:domain skos:Concept ;
+        rdfs:comment "A definition for which products not to be associated with the concept." ;
+        rdf:label "definitionIncludes" ;
+        rdfs:range xsd:string .
+
+ke3p:closeBroadMatch rdf:type rdf:Property ;  
+        rdfs:subPropertyOf skos:broadMatch ;
+        rdfs:domain skos:Concept ;
+        rdfs:comment "A concept which is closely broadMatch related to another concept." ;
+        rdf:label "closeBroadMatch" ;
+        rdfs:range skos:Concept .
+
+ke3p:closeNarrowMatch rdf:type rdf:Property ;
+        rdfs:subPropertyOf skos:narrowMatch ;
+        rdfs:domain skos:Concept ;
+        rdfs:comment "A concept which is closely narrowMatch related to another concept." ;
+        rdf:label "closeNarrowMatch" ;
+        rdfs:range skos:Concept .
+
+ke3p:relatedBroadMatch rdf:type rdf:Property ;  
+        rdfs:subPropertyOf skos:broadMatch ;
+        rdfs:domain skos:Concept ;
+        rdfs:comment "A concept which is relatively broadMatch related to another concept." ;
+        rdf:label "relatedBroadMatch" ;
+        rdfs:range skos:Concept .
+
+ke3p:relatedNarrowMatch rdf:type rdf:Property ;
+        rdfs:subPropertyOf skos:narrowMatch ;
+        rdfs:domain skos:Concept ;
+        rdfs:comment "A concept which is relatively narrowMatch related to another concept." ;
+        rdf:label "relatedNarrowMatch" ;
+        rdfs:range skos:Concept .
+
+ke3p:clicks rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdfs:value ;
+        rdfs:comment "The number of times a schema:result has been clicked. Used in context with schema:SearchAction." ;
+        rdf:label "clicks" ;
+        rdfs:range xsd:integer .
+
+ke3p:coverage rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdfs:value ;
+        rdfs:comment "" ;
+        rdf:label "coverage" ;
+        rdfs:range xsd:float .
+
+ke3p:isBio rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "Indicates whether a product is organic." ;
+        rdf:label "isBio" ;
+        rdfs:range xsd:boolean .
+
+ke3p:isVegan rdf:type rdf:Property ;
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "Indicates whether a product is vegan." ;
+        rdf:label "isVegan" ;
+        rdfs:range xsd:boolean .
+
+ke3p:isVegetarian rdf:type rdf:Property ;
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "Indicates whether a product is vegetarian." ;
+        rdf:label "isVegetarian" ;
+        rdfs:range xsd:boolean .
+
+ke3p:isGlutenFree rdf:type rdf:Property ;
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "Indicates whether a product is gluten free." ;
+        rdf:label "isGlutenFree" ;
+        rdfs:range xsd:boolean .
+
+ke3p:isLactoseFree rdf:type rdf:Property ;
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "Indicates whether a product is lactose free." ;
+        rdf:label "isLactoseFree" ;
+        rdfs:range xsd:boolean .
+
+ke3p:isHalal rdf:type rdf:Property ;
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "Indicates whether a product is halal." ;
+        rdf:label "isHalal" ;
+        rdfs:range xsd:boolean .
+
+ke3p:isFructoseFree rdf:type rdf:Property ;
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "Indicates whether a product is fructose free." ;
+        rdf:label "isFructoseFree" ;
+        rdfs:range xsd:boolean .
+
+# Relations
+
+ke3p:PriceFamily rdf:type owl:Class ;
+        rdfs:subClassOf sch:ProductGroup .
+        rdfs:comment "A group of products that share the same price." ;
+
+ke3p:hasPriceFamily rdf:type rdf:Property ;
+        rdfs:subPropertyOf sch:isVariantOf ;
+        rdfs:range ke3p:PriceFamily .
+
+ke3p:PriceGroup rdf:type owl:Class ;
+        rdfs:subClassOf sch:ProductGroup .
+        rdfs:comment "A group of products that share the same price." ;
+
+ke3p:hasPriceGroup rdf:type rdf:Property ;
+        rdfs:subPropertyOf sch:isVariantOf ;
+        rdfs:range ke3p:PriceGroup .
+
+ke3p:hasProduct rdf:type rdf:Property ;
+        rdfs:subPropertyOf sch:hasVariant ;
+        rdfs:domain ke3p:PriceFamily, ke3p:PriceGroup ;
+
+# Shelf information
+
+ke3p:Shelf rdf:type owl:Class ;
+        rdfs:comment "A shelf in a store." .
+
+ke3p:shelfNumber rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain ke3p:Shelf ;
+        rdfs:comment "The index of a shelf in a store." ;
+        rdf:label "shelfNumber" ;
+        rdfs:range xsd:int .
+
+ke3p:onShelf rdf:type rdf:Property ;  
+        rdfs:subPropertyOf rdf:value ;
+        rdfs:domain sch:Product ;
+        rdfs:comment "The shelf on which a product is located." ;
+        rdf:label "onShelf" ;
+        rdfs:range ke3p:Shelf .
 
 ke3p:shelf rdf:type rdf:Property ;  
         rdfs:subPropertyOf rdf:value ;
