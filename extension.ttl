@@ -5,6 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foodon: <http://purl.obolibrary.org/obo/FOODON_> .
+@prefix sch: <http://schema.org/> .
 
 <https://purl.archive.org/ke3p#> a owl:Ontology ;
     rdfs:label "KE3P Ontology" ;
