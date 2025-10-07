@@ -173,16 +173,16 @@ ke3p:isFructoseFree rdf:type rdf:Property ;
 # Relations
 
 ke3p:PriceFamily rdf:type owl:Class ;
-        rdfs:subClassOf sch:ProductGroup .
-        rdfs:comment "A group of products that share the same price." ;
+        rdfs:subClassOf sch:ProductGroup ;
+        rdfs:comment "A group of products that share the same price." .
 
 ke3p:hasPriceFamily rdf:type rdf:Property ;
         rdfs:subPropertyOf sch:isVariantOf ;
         rdfs:range ke3p:PriceFamily .
 
 ke3p:PriceGroup rdf:type owl:Class ;
-        rdfs:subClassOf sch:ProductGroup .
-        rdfs:comment "A group of products that share the same price." ;
+        rdfs:subClassOf sch:ProductGroup ;
+        rdfs:comment "A group of products that share the same price." .
 
 ke3p:hasPriceGroup rdf:type rdf:Property ;
         rdfs:subPropertyOf sch:isVariantOf ;
@@ -190,7 +190,7 @@ ke3p:hasPriceGroup rdf:type rdf:Property ;
 
 ke3p:hasProduct rdf:type rdf:Property ;
         rdfs:subPropertyOf sch:hasVariant ;
-        rdfs:domain ke3p:PriceFamily, ke3p:PriceGroup ;
+        rdfs:domain ke3p:PriceFamily, ke3p:PriceGroup .
 
 # Shelf information
 
